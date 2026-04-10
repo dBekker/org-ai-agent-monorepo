@@ -1,0 +1,13 @@
+---
+description: Core engineering rules for all work
+globs: ["**/*"]
+alwaysApply: true
+---
+
+Read `docs/ai/00-core-engineering.md` and `docs/ai/30-quality-gates.md`.
+
+Rules:
+- preserve architecture boundaries
+- reuse before creating a new abstraction
+- prefer the smallest defensible change
+- document recurring new rules

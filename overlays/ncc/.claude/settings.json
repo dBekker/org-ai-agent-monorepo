@@ -1,0 +1,26 @@
+{
+  "defaultMode": "default",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "LS",
+      "Bash(pnpm lint)",
+      "Bash(pnpm build)",
+      "Bash(pnpm check:env)",
+      "Bash(docker compose ps)",
+      "Bash(docker compose logs *)",
+      "Bash(docker compose exec app pnpm lint)",
+      "Bash(docker compose exec app pnpm build)",
+      "Bash(docker compose exec app pnpm db:generate)"
+    ],
+    "deny": [
+      "Bash(git push *)",
+      "Bash(rm -rf *)",
+      "Bash(git reset --hard *)",
+      "Bash(pnpm db:push)",
+      "Bash(docker compose down -v*)"
+    ]
+  }
+}

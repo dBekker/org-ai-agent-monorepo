@@ -1,0 +1,13 @@
+---
+description: Mobile / backend defaults for Flutter + FastAPI + AI services
+globs: ["apps/mobile/**", "services/**", "lib/**", "app/**", "src/**"]
+alwaysApply: false
+---
+
+Read `docs/ai/20-mobile-backend-fastapi-ai.md`.
+
+Defaults:
+- Flutter uses feature-first clean architecture for new work
+- FastAPI keeps router / service / repository / provider boundaries explicit
+- AI logic belongs to the assistant bounded context, not random handlers
+- transport models stay separate from domain models

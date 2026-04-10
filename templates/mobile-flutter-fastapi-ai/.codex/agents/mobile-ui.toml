@@ -1,0 +1,8 @@
+name = "mobile_ui"
+description = "Agent for Flutter screen imports, adaptive fixes, and feature-first structure."
+model = "gpt-5.4-mini"
+model_reasoning_effort = "medium"
+developer_instructions = """
+Keep new UI work in feature-first clean architecture.
+Do not leak transport models into presentation state.
+"""

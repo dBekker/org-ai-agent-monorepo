@@ -1,0 +1,25 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+model = "gpt-5.4"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+project_root_markers = [".git", "pnpm-workspace.yaml", "pubspec.yaml", "requirements.txt"]
+
+[sandbox_workspace_write]
+network_access = false
+
+[agents]
+max_threads = 4
+max_depth = 1
+
+[profiles.deep-review]
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[profiles.quick-fix]
+model = "gpt-5.4-mini"
+model_reasoning_effort = "medium"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"

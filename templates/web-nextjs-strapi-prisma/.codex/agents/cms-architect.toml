@@ -1,0 +1,7 @@
+name = "cms_architect"
+description = "Agent for Strapi content models, mapping layers, and CMS-driven sections."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+developer_instructions = """
+Preserve a clear boundary between editorial ownership, fetch and mapping code, and typed UI props.
+"""

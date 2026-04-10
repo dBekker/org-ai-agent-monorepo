@@ -1,0 +1,13 @@
+---
+description: Web stack defaults for Next.js + Strapi + Prisma
+globs: ["apps/web/**", "apps/cms/**", "packages/**", "prisma/**"]
+alwaysApply: false
+---
+
+Read `docs/ai/10-web-stack-nextjs-strapi-prisma.md`.
+
+Defaults:
+- Server Components by default
+- shared UI belongs in `packages/ui`
+- Strapi DTOs mapped before they reach view code
+- Prisma changes go through schema + migration flow

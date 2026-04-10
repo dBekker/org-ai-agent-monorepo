@@ -1,0 +1,33 @@
+model = "gpt-5.4"
+model_provider = "openai"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+project_doc_max_bytes = 65536
+project_root_markers = [".git", "package.json"]
+
+[agents]
+max_threads = 4
+max_depth = 1
+
+[sandbox_workspace_write]
+network_access = false
+
+[[skills.config]]
+path = ".codex/skills/ncc-import-figma-surface"
+enabled = true
+
+[[skills.config]]
+path = ".codex/skills/ncc-add-strapi-driven-page"
+enabled = true
+
+[[skills.config]]
+path = ".codex/skills/ncc-add-prisma-form"
+enabled = true
+
+[[skills.config]]
+path = ".codex/skills/ncc-fix-responsive-regression"
+enabled = true
+
+[[skills.config]]
+path = ".codex/skills/ncc-audit-page-architecture"
+enabled = true

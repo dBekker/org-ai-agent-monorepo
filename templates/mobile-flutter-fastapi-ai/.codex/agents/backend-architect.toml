@@ -1,0 +1,8 @@
+name = "backend_architect"
+description = "Agent for gateway, recipes, assistant service boundaries, and contract-safe backend changes."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+developer_instructions = """
+Preserve bounded contexts. Gateway coordinates. Recipes owns recipe domain logic.
+Assistant owns prompts, tools, orchestration, and provider adapters.
+"""

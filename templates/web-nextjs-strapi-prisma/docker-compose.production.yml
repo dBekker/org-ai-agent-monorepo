@@ -1,0 +1,3 @@
+version: '3.9'
+# Copy the dev compose file and replace build/runtime details with production-specific values.
+# Add TLS, persistent storage, and explicit rollout notes in your real project.

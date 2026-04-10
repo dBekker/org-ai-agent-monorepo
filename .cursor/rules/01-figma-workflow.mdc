@@ -1,0 +1,10 @@
+---
+description: Figma to code workflow and pixel-perfect guidance
+globs: ["apps/web/**", "packages/ui/**", "apps/mobile/**", "lib/**", "src/**"]
+alwaysApply: false
+---
+
+When the task touches page import, screen import, styling, layout, responsive UI, or adaptive UI:
+1. read `docs/ai/01-figma-to-code.md`
+2. start with tokens and shared primitives
+3. validate target breakpoints or device classes before finishing

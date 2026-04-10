@@ -1,0 +1,13 @@
+{
+  "extends": "../../packages/config/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "ui": ["../../packages/ui/src/components/index.ts"],
+      "types": ["../../packages/types/src/index.ts"]
+    },
+    "jsx": "preserve"
+  },
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts"],
+  "exclude": ["node_modules"]
+}

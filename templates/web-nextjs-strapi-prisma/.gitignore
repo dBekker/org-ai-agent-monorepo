@@ -1,0 +1,14 @@
+node_modules/
+.next/
+dist/
+build/
+.turbo/
+.env
+.env.*
+!.env.example
+coverage/
+.DS_Store
+apps/cms/.tmp/
+apps/cms/build/
+apps/cms/cache/
+apps/cms/public/uploads/

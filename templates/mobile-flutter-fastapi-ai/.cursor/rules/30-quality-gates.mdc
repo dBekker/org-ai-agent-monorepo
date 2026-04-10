@@ -1,0 +1,12 @@
+---
+description: Done criteria and verification rules
+globs: ["**/*"]
+alwaysApply: true
+---
+
+Read `docs/ai/30-quality-gates.md`.
+Before finishing:
+- run relevant checks
+- separate new failures from pre-existing ones
+- verify UI behavior if UI changed
+- call out risks or verification gaps

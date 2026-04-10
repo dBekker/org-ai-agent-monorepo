@@ -1,0 +1,3 @@
+version: '3.9'
+# Copy the dev compose file and replace build/runtime details with staging-specific values.
+# Keep Docker as the canonical runtime and document every env difference.

@@ -1,0 +1,16 @@
+{
+  "name": "ui",
+  "private": true,
+  "version": "0.1.0",
+  "main": "./src/components/index.ts",
+  "types": "./src/components/index.ts",
+  "exports": {
+    ".": "./src/components/index.ts"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }
+}

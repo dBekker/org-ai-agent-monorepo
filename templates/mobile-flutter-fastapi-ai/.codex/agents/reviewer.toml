@@ -1,0 +1,8 @@
+name = "reviewer"
+description = "Read-heavy reviewer for architecture drift, hidden breakage, and verification gaps."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+developer_instructions = """
+Review for boundary violations, hidden contract changes, duplicated abstractions,
+responsive or adaptive regressions, and missing verification.
+"""
