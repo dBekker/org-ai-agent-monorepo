@@ -1,0 +1,63 @@
+name: Flutter Quality
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "**/*.dart"
+      - "**/pubspec.yaml"
+      - "**/pubspec.lock"
+      - "**/.fvmrc"
+
+env:
+  # Set this to apps/mobile when the Flutter app lives below the repo root.
+  FLUTTER_WORKING_DIRECTORY: .
+
+jobs:
+  flutter-quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve Flutter version
+        id: flutter-version
+        shell: bash
+        run: |
+          version="stable"
+          fvmrc_path="${FLUTTER_WORKING_DIRECTORY}/.fvmrc"
+          if [ -f "$fvmrc_path" ]; then
+            fvm_version=$(grep -oE '"flutter"[[:space:]]*:[[:space:]]*"[^"]+"' "$fvmrc_path" | sed -E 's/.*"([^"]+)"/\1/')
+            if [ -n "$fvm_version" ]; then
+              version="$fvm_version"
+            fi
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ steps.flutter-version.outputs.version }}
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        working-directory: ${{ env.FLUTTER_WORKING_DIRECTORY }}
+        run: flutter pub get
+
+      - name: Generate code
+        working-directory: ${{ env.FLUTTER_WORKING_DIRECTORY }}
+        run: dart run build_runner build --delete-conflicting-outputs
+
+      - name: Check formatting
+        working-directory: ${{ env.FLUTTER_WORKING_DIRECTORY }}
+        run: dart format --set-exit-if-changed .
+
+      - name: Analyze
+        working-directory: ${{ env.FLUTTER_WORKING_DIRECTORY }}
+        run: flutter analyze
+
+      - name: Test
+        working-directory: ${{ env.FLUTTER_WORKING_DIRECTORY }}
+        run: flutter test --coverage

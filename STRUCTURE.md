@@ -32,6 +32,10 @@ org-ai-agent-monorepo-v1/
     skills/
     agents/
   templates/
+    ci/
+      flutter-quality.github-actions.yml
+    mobile-release/
+      RELEASE_CHECKLIST.md
     web-nextjs-strapi-prisma/
       apps/
         web/
@@ -62,6 +66,14 @@ org-ai-agent-monorepo-v1/
       AGENTS.md
       CLAUDE.md
   overlays/
+    internal-mobile-flutter/
+      ai_docs/
+        standards/
+      AGENTS.md
+      CLAUDE.md
+      README.md
+      MERGE_GUIDE.md
+      SUMMARY.md
     ncc/
       ai_docs/
         standards/

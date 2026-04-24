@@ -36,3 +36,6 @@ Existing projects should adopt the foundation package first, then standardize ne
 
 ## 7. Quality gates are part of the template
 Verification is built into the standard instead of being left to personal habit.
+
+## 8. Internal mobile brownfield overlay stays separate
+Internal mobile brownfield guidance is maintained as a separate overlay instead of being folded into the greenfield Flutter + FastAPI template.
