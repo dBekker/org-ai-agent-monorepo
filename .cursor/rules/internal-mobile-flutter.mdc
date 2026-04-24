@@ -1,0 +1,22 @@
+---
+description: Internal Flutter brownfield defaults for repositories using the shared mobile overlay
+globs: ["**/*.dart", "**/pubspec.yaml", "**/.fvmrc", "android/**", "ios/**"]
+alwaysApply: false
+---
+
+Read `docs/ai/20-mobile-backend-fastapi-ai.md` and `docs/ai/30-quality-gates.md`.
+
+If the repository also includes the internal mobile overlay, read:
+- `ai_docs/standards/flutter-architecture.md`
+- `ai_docs/standards/flutter-code-style.md`
+- `ai_docs/standards/flutter-testing.md`
+- `ai_docs/standards/flutter-ci-deploy.md`
+- `ai_docs/standards/brownfield-mobile-adoption.md`
+
+Defaults:
+- prefer the repo's chosen structure mode
+- use package imports for local app code
+- route app screens through the central router
+- keep DI in `GetIt` + `Injectable`
+- run build_runner when generated files are required
+- keep release and generated-files policy explicit
